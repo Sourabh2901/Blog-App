@@ -35,7 +35,6 @@ public class GlobalExceptionHandler {
 		});
 		
 		return new ResponseEntity<Map<String,String>>(response ,HttpStatus.BAD_REQUEST);
-		
 	}
 	
 	
@@ -45,6 +44,14 @@ public class GlobalExceptionHandler {
 		String message = "Please Pass Valid Json Request Body";
 		ApiResponse apiResponse = new ApiResponse(message , false);
 		return new ResponseEntity<ApiResponse>(apiResponse ,HttpStatus.BAD_REQUEST);
+	}
+	
+	@ExceptionHandler(LoginException.class)
+	public ResponseEntity<ApiResponse> handleLoginException(LoginException ex){
+		
+		String message = ex.getMessage();
+		ApiResponse apiResponse = new ApiResponse(message , true);
+		return new ResponseEntity<ApiResponse>(apiResponse ,HttpStatus.NOT_FOUND);
 	}
 	
 }

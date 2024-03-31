@@ -23,10 +23,9 @@ public class UserServiceImpl implements UserService {
 	private ModelMapper modelMapper;
 
 	@Override
-	public UserDto createUser(UserDto userDto) {
-		User user = this.dtoToUser(userDto);
+	public UserDto createUser(User user) {
 		User savedUser = userRepo.save(user);
-		return this.userToDto(savedUser);
+		return this.modelMapper.map(savedUser, UserDto.class);
 	}
 
 	@Override
