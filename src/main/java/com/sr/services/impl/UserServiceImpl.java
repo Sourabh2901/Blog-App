@@ -5,14 +5,22 @@ import java.util.List;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.sr.config.AppConstant;
+import com.sr.entities.Role;
 import com.sr.entities.User;
 import com.sr.execeptions.ResourceNotFoundException;
+import com.sr.execeptions.UserCreationException;
 import com.sr.payloads.UserDto;
+import com.sr.repositories.RoleRepo;
 import com.sr.repositories.UserRepo;
 import com.sr.services.UserService;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Service
 public class UserServiceImpl implements UserService {
 	
@@ -21,11 +29,41 @@ public class UserServiceImpl implements UserService {
 	
 	@Autowired
 	private ModelMapper modelMapper;
+	
+	@Autowired
+	private RoleRepo roleRepo;
+	
+	@Autowired
+	private PasswordEncoder passwordEncoder;
+	
+//	Instead of declaring this again and again use Annotation at top of class named @Slf4j
+//	private static final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 
 	@Override
-	public UserDto createUser(User user) {
-		User savedUser = userRepo.save(user);
-		return this.modelMapper.map(savedUser, UserDto.class);
+	public UserDto createUser(UserDto userDto) {
+		
+		try {
+			User user = this.modelMapper.map(userDto, User.class);
+			
+//			Encoding password
+			String password = user.getPassword();
+			user.setPassword(passwordEncoder.encode(password));
+			
+//			Setting roles
+			Role role = roleRepo.findById(AppConstant.NORMAL_USER).get();
+			user.getRoles().add(role);
+			
+//			Saving user in DB
+			User savedUser = userRepo.save(user);
+			
+			log.info("User Saved Succesfully : "+user.getName());
+			
+			return this.modelMapper.map(savedUser, UserDto.class);
+		}catch(Exception ex) {
+			log.error("Exception Occured While Saving User in DB : "+ ex.getMessage());
+//			log.debug("Debug logger While Saving User in DB : "+ ex.getMessage());
+			throw new UserCreationException("Exception Occured While Saving User in DB");
+		}
 	}
 
 	@Override
@@ -39,7 +77,7 @@ public class UserServiceImpl implements UserService {
 		user.setPassword(userDto.getPassword());
 		
 		User updatedUser = userRepo.save(user);
-		return this.userToDto(updatedUser);
+		return this.modelMapper.map(updatedUser, UserDto.class);
 	}
 
 	@Override
@@ -47,7 +85,7 @@ public class UserServiceImpl implements UserService {
 		User user = userRepo.findById(userId)
 							.orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
 		
-		return this.userToDto(user);
+		return this.modelMapper.map(user, UserDto.class);
 	}
 
 	@Override
@@ -56,7 +94,7 @@ public class UserServiceImpl implements UserService {
 		List<UserDto> allUsersDto = new ArrayList<>();
 		
 		for(User x:allUsers) {
-			allUsersDto.add(this.userToDto(x));
+			allUsersDto.add(this.modelMapper.map(x, UserDto.class));
 		}
 		
 		return allUsersDto;

@@ -1,0 +1,79 @@
+08:48:50.690 [restartedMain] INFO  com.sr.BlogAppApplication - Starting BlogAppApplication using Java 17.0.9 with PID 56314 (/Users/arinjaysharma/Desktop/STS-Workspace/Blog-App/target/classes started by arinjaysharma in /Users/arinjaysharma/Desktop/STS-Workspace/Blog-App)
+08:48:50.690 [restartedMain] DEBUG com.sr.BlogAppApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+08:48:50.690 [restartedMain] INFO  com.sr.BlogAppApplication - No active profile set, falling back to 1 default profile: "default"
+08:48:50.773 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+08:48:50.780 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 5 JPA repository interfaces.
+08:48:50.829 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+08:48:50.829 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+08:48:50.829 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+08:48:50.829 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+08:48:50.833 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+08:48:50.833 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 142 ms
+08:48:50.839 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+08:48:50.850 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6685e735
+08:48:50.850 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+08:48:50.851 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/BlogAppDB'
+08:48:50.863 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+08:48:50.863 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+08:48:50.865 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+08:48:50.897 [restartedMain] INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.sr.entities.Category (class must be instantiated by Interceptor)
+08:48:50.901 [restartedMain] INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.sr.entities.Post (class must be instantiated by Interceptor)
+08:48:50.906 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+08:48:50.949 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+08:48:50.986 [restartedMain] DEBUG c.s.security.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+08:48:51.049 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+08:48:51.090 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@11fde1e3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e14a2f0, org.springframework.security.web.context.SecurityContextHolderFilter@2351693f, org.springframework.security.web.header.HeaderWriterFilter@735a6c45, org.springframework.security.web.authentication.logout.LogoutFilter@612bdfab, com.sr.security.JWTAuthenticationFilter@730cca2f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3c0b26f2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c934d72, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@383e82f1, org.springframework.security.web.session.SessionManagementFilter@393d9c0a, org.springframework.security.web.access.ExceptionTranslationFilter@19f0d6b9, org.springframework.security.web.access.intercept.AuthorizationFilter@28c6cfb]
+08:48:51.129 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+08:48:51.137 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+08:48:51.137 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path ''
+08:48:51.141 [restartedMain] INFO  com.sr.BlogAppApplication - Started BlogAppApplication in 0.466 seconds (process running for 426.2)
+08:48:51.145 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+08:53:57.815 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+08:53:57.823 [Thread-11] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8090"]
+08:53:57.831 [Thread-11] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+08:53:57.833 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+08:53:57.839 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+08:58:09.103 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+08:58:09.128 [restartedMain] INFO  com.sr.BlogAppApplication - Starting BlogAppApplication using Java 17.0.9 with PID 56549 (/Users/arinjaysharma/Desktop/STS-Workspace/Blog-App/target/classes started by arinjaysharma in /Users/arinjaysharma/Desktop/STS-Workspace/Blog-App)
+08:58:09.128 [restartedMain] DEBUG com.sr.BlogAppApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+08:58:09.128 [restartedMain] INFO  com.sr.BlogAppApplication - No active profile set, falling back to 1 default profile: "default"
+08:58:09.145 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+08:58:09.145 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+08:58:09.475 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+08:58:09.504 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 5 JPA repository interfaces.
+08:58:09.722 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+08:58:09.727 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+08:58:09.728 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+08:58:09.728 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+08:58:09.747 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+08:58:09.747 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 602 ms
+08:58:09.760 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+08:58:09.887 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@62d4e2c0
+08:58:09.888 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+08:58:09.892 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/BlogAppDB'
+08:58:09.933 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+08:58:09.954 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+08:58:09.968 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+08:58:10.063 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+08:58:10.418 [restartedMain] INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.sr.entities.Category (class must be instantiated by Interceptor)
+08:58:10.424 [restartedMain] INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.sr.entities.Post (class must be instantiated by Interceptor)
+08:58:10.507 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+08:58:10.567 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+08:58:10.736 [restartedMain] DEBUG c.s.security.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+08:58:10.875 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+08:58:11.006 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@617343a1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@24365223, org.springframework.security.web.context.SecurityContextHolderFilter@21554ed9, org.springframework.security.web.header.HeaderWriterFilter@2932bf89, org.springframework.security.web.authentication.logout.LogoutFilter@fd1cf74, com.sr.security.JWTAuthenticationFilter@5d16a40c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@444dc3b5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6040f630, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@724fad6d, org.springframework.security.web.session.SessionManagementFilter@79ce3339, org.springframework.security.web.access.ExceptionTranslationFilter@465e1755, org.springframework.security.web.access.intercept.AuthorizationFilter@2d2d05a1]
+08:58:11.124 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+08:58:11.136 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+08:58:11.142 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path ''
+08:58:11.148 [restartedMain] INFO  com.sr.BlogAppApplication - Started BlogAppApplication in 2.146 seconds (process running for 2.647)
+08:58:28.485 [http-nio-8090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+08:58:28.485 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+08:58:28.486 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+08:58:28.526 [http-nio-8090-exec-1] ERROR com.sr.security.JwtTokenHelper - Jwt Exception Occured
+08:58:28.722 [http-nio-8090-exec-1] ERROR c.sr.services.impl.UserServiceImpl - Exception Occured While Saving User in DB : Could not commit JPA transaction
+08:58:28.735 [http-nio-8090-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.sr.execeptions.UserCreationException: Exception Occured While Saving User in DB]
+08:58:49.690 [RMI TCP Connection(10)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+08:58:49.691 [RMI TCP Connection(10)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8090"]
+08:58:49.695 [RMI TCP Connection(10)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+08:58:49.697 [RMI TCP Connection(10)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+08:58:49.702 [RMI TCP Connection(10)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

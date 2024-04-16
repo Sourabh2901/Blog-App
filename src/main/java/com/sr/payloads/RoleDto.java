@@ -1,5 +1,6 @@
 package com.sr.payloads;
 
+import lombok.Builder;
 import lombok.Data;
 
 @Data

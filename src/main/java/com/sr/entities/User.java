@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.hibernate.validator.constraints.UniqueElements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -32,13 +33,14 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Table(name = "users")
 @NoArgsConstructor
 @Getter
 @Setter
-@AllArgsConstructor @Builder
+@AllArgsConstructor @Builder @ToString
 public class User implements UserDetails{
 	
 	@Id
@@ -47,6 +49,8 @@ public class User implements UserDetails{
 	
 	@Column(name = "user_name" ,nullable = false ,length = 100)
 	private String name;
+	
+	@UniqueElements
 	private String email;
 	private String password;
 	private String about;
@@ -73,7 +77,6 @@ public class User implements UserDetails{
 		
 		return authorities;
 	}
-
 
 
 	@Override

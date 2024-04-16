@@ -54,4 +54,13 @@ public class GlobalExceptionHandler {
 		return new ResponseEntity<ApiResponse>(apiResponse ,HttpStatus.NOT_FOUND);
 	}
 	
+	@ExceptionHandler(UserCreationException.class)
+	public ResponseEntity<ApiResponse> userCreationException(UserCreationException ex){
+		
+		String message = ex.getMessage();
+		ApiResponse apiResponse = new ApiResponse(message , true);
+		return new ResponseEntity<ApiResponse>(apiResponse ,HttpStatus.NOT_FOUND);
+	}
+	
+	
 }

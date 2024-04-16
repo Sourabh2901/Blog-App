@@ -12,10 +12,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+import lombok.Builder;
 import lombok.Data;
 
 @Entity
-@Data
+@Data @Builder
 public class Post {
 
 	@Id

@@ -4,12 +4,11 @@ package com.sr.payloads;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.sr.entities.Role;
-
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -18,7 +17,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
+@AllArgsConstructor @Builder
 public class UserDto {
 	
 	private int id;

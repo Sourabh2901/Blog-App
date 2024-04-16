@@ -7,7 +7,7 @@ import com.sr.payloads.UserDto;
 
 public interface UserService {
 	
-	UserDto createUser(User user);
+	UserDto createUser(UserDto user);
 	UserDto updateUser(UserDto user ,Integer userId);
 	UserDto getUserById(Integer userId);
 	List<UserDto> getAllUsers();

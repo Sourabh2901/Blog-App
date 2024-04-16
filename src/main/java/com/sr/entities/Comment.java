@@ -14,6 +14,7 @@ public class Comment {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer commentId;
+	
 	private String content;
 	
 //	@OneToOne
@@ -21,6 +22,4 @@ public class Comment {
 	
 	@ManyToOne
 	private Post post;
-	
-	
 }
