@@ -1,15 +1,9 @@
 package com.sr.service;
 
-import static org.mockito.Mockito.when;
-
 import java.util.Date;
 import java.util.Optional;
 
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -25,11 +19,9 @@ import com.sr.entities.Category;
 import com.sr.entities.Post;
 import com.sr.entities.User;
 import com.sr.payloads.PostDto;
-import com.sr.payloads.UserDto;
 import com.sr.repositories.CategoryRepo;
 import com.sr.repositories.PostRepo;
 import com.sr.repositories.UserRepo;
-import com.sr.services.PostService;
 import com.sr.services.impl.PostServiceImpl;
 
 

@@ -20,10 +20,8 @@ import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import com.sr.controllers.UserController;
-import com.sr.entities.User;
 import com.sr.payloads.RoleDto;
 import com.sr.payloads.UserDto;
-import com.sr.repositories.RoleRepo;
 import com.sr.services.UserService;
 
 @WebMvcTest(controllers = UserController.class)
@@ -37,17 +35,13 @@ public class UserControllerTest {
 	@Autowired
 	private UserService userService;
 	
-	@Autowired
-	private RoleRepo roleRepo;
-	
-	private User user;
 	private UserDto userDto;
 	private RoleDto roleDto;
 	
 	@BeforeEach
 	public void init() {
-		user = User.builder().name("Sourabh").about("Java Developer")
-				.email("sourabh@gmail.com").password("sourabh").build();
+//		User user = User.builder().name("Sourabh").about("Java Developer")
+//				.email("sourabh@gmail.com").password("sourabh").build();
 		
 		userDto = UserDto.builder().name("Sourabh").about("Java Developer")
 				.email("sourabh@gmail.com").password("sourabh").build();

@@ -7,14 +7,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import org.hibernate.validator.constraints.UniqueElements;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.password.PasswordEncoder;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -40,17 +35,18 @@ import lombok.ToString;
 @NoArgsConstructor
 @Getter
 @Setter
-@AllArgsConstructor @Builder @ToString
+@AllArgsConstructor @ToString
+@Builder
 public class User implements UserDetails{
 	
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int id;
 	
 	@Column(name = "user_name" ,nullable = false ,length = 100)
 	private String name;
-	
-	@UniqueElements
 	private String email;
 	private String password;
 	private String about;

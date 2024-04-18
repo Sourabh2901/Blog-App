@@ -2,7 +2,6 @@ package com.sr.services;
 
 import java.util.List;
 
-import com.sr.entities.User;
 import com.sr.payloads.UserDto;
 
 public interface UserService {

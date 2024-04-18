@@ -16,7 +16,8 @@ import lombok.Builder;
 import lombok.Data;
 
 @Entity
-@Data @Builder
+@Data
+@Builder
 public class Post {
 
 	@Id

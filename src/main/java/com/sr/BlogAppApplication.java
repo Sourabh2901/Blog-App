@@ -24,7 +24,7 @@ public class BlogAppApplication implements CommandLineRunner{
 	}
 	
 	@Bean
-	public ModelMapper modelMapper() {
+	ModelMapper modelMapper() {
 		return new ModelMapper();
 	}
 

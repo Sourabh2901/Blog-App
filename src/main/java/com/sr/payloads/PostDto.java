@@ -7,7 +7,8 @@ import java.util.Set;
 import lombok.Builder;
 import lombok.Data;
 
-@Data @Builder
+@Data
+@Builder
 public class PostDto {
 
 	private Integer postId;
